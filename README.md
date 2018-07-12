@@ -3,12 +3,19 @@
 
 ## 使用前必读
 `屏幕适配 >= 1366px`
+1. 技术栈vue + vue-router + vuex, axios作为http请求库
+2. 集成打包脚手架使用[vue-cli3.0](https://cli.vuejs.org)
+3. 使用[iview](https://www.iviewui.com)作为主体UI组件
+4. Vue代码风格参考[style-guide](https://vuefe.cn/v2/style-guide/),JS参考[JavaScript Standard Style](https://standardjs.com/rules-zhcn.html)
+5. 使用[stylus](https://www.zhangxinxu.com/jq/stylus/)作为预编译CSS框架,px自动转换rem,推荐[BEM](https://www.w3cplus.com/css/bem-definitions.html)作为CSS书写规范
+6. 推荐使用VSCODE作为开发IDE，yarn安装包依赖
+7. Git规范参考[GitFlow](https://www.cnblogs.com/lcngu/p/5770288.html)和[Commit message](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 
 ## 准备
 ```
 安装Node.js > 8
 安装yarn
-全局安装vue-cli3.0
+全局安装vue-cli3.0 (mac 需要 sudo)
 npm install -g @vue/cli
 # OR
 yarn global add @vue/cli
@@ -18,9 +25,13 @@ yarn global add @vue/cli
 
 - [VSCODE](https://code.visualstudio.com/)
 
+#### VSCODE插件
+
 - [Vetur - Vue tooling for VS Code](https://vuejs.github.io/vetur/)
 
 - [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+- [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
 ### JS风格指南
 
