@@ -85,7 +85,7 @@ yarn global add @vue/cli
 ├── src           # Code Folder
   ├── assets      # 资源
   ├── components  # 组件
-  ├── features    # 功能模块
+  ├── pages    # 功能模块
     ├── modules       # vuex
     ├── pages         # view
     ├── router.js     # 子路由
