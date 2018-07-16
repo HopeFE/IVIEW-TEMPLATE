@@ -86,9 +86,11 @@ yarn global add @vue/cli
   ├── assets      # 资源
   ├── components  # 组件
   ├── pages    # 功能模块
-    ├── modules       # vuex
-    ├── pages         # view
-    ├── router.js     # 子路由
+    ├── error-pages     # 错误模块
+    ├── login           # 登录模块
+      ├── modules       # vuex
+      ├── pages         # view
+      ├── router.js     # 子路由
   ├── router      # 主路由
   ├── store.js    # Vuex Main Stroe
   ├── main.js     # Entry Js
