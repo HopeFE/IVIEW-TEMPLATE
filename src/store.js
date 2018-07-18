@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+// import createRouteState from '@/plugins/history'
 import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)

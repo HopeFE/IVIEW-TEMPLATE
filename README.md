@@ -1,13 +1,17 @@
 # IVIEW-TEMPLATE
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Vue Style Guide](https://img.shields.io/badge/vue_style-beta-brightgreen.svg)](https://vuefe.cn/v2/style-guide/)
+[![vue](https://img.shields.io/badge/vue-2.5.16-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
+[![iview ui](https://img.shields.io/badge/iview-2.14.0-brightgreen.svg?style=flat-square)](https://github.com/iview/iview)
+[![vue-cli3.0](https://img.shields.io/badge/vue_cli-3.0-brightgreen.svg?style=flat-square)](https://cli.vuejs.org)
 
 ## 使用前必读
 `屏幕适配 >= 1366px`
-1. 技术栈vue + vue-router + vuex, axios作为http请求库
+1. 技术栈[Vue](http://cn.vuejs.org/guide/) + [Vue-router](http://router.vuejs.org/zh-cn/index.html) + [Vuex](http://vuex.vuejs.org/zh-cn/index.html), [Axios](https://github.com/mzabriskie/axios)作为http请求库
 2. 集成打包脚手架使用[vue-cli3.0](https://cli.vuejs.org)
 3. 使用[iview](https://www.iviewui.com)作为主体UI组件
 4. Vue代码风格参考[style-guide](https://vuefe.cn/v2/style-guide/),JS参考[JavaScript Standard Style](https://standardjs.com/rules-zhcn.html)
-5. 使用[stylus](https://www.zhangxinxu.com/jq/stylus/)作为预编译CSS框架,px自动转换rem,推荐[BEM](https://www.w3cplus.com/css/bem-definitions.html)作为CSS书写规范
+5. 使用[stylus](https://www.zhangxinxu.com/jq/stylus/)作为预编译CSS框架,推荐[BEM](https://www.w3cplus.com/css/bem-definitions.html)作为CSS书写规范
 6. 推荐使用VSCODE作为开发IDE，yarn安装包依赖
 7. Git规范参考[GitFlow](https://www.cnblogs.com/lcngu/p/5770288.html)和[Commit message](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 
@@ -111,7 +115,3 @@ npm/yarn run build
 npm/yarn run build --report 查看打包JS大小
 open Files in DistT Folder
 ```
-
-## 高级进阶
-
-- [Vue CLI3.0](https://cli.vuejs.org)

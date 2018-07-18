@@ -3,6 +3,7 @@ import iView from 'iview'
 import App from './app.vue'
 import router from './router'
 import store from './store'
+import VueMeta from 'vue-meta'
 import VueLazyload from 'vue-lazyload'
 
 Vue.config.productionTip = false
@@ -12,7 +13,9 @@ Vue.use(VueLazyload, {
   error: 'https://ymm.oss-cn-hangzhou.aliyuncs.com/ymmfile/bbs-biz/2971def3-083d-48a4-ada5-f54070e9e857',
   attempt: 2
 })
-
+// Meta自设置
+Vue.use(VueMeta)
+// iView引入
 Vue.use(iView)
 
 new Vue({

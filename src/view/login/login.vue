@@ -37,6 +37,9 @@
 <script>
 export default {
   name: 'Login',
+  metaInfo: {
+    title: '登录'
+  },
   data () {
     return {
       form: {
