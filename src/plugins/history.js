@@ -1,29 +1,28 @@
-exports.sync = function (store, router, options) {
+import _ from 'lodash'
+/** 获取当前页面打开历史 */
+export default (store, router, options) => {
   const moduleName = (options || {}).moduleName || 'history'
-
   store.registerModule(moduleName, {
     namespaced: true,
-    state: cloneRoute(router.currentRoute),
+    state: [],
     mutations: {
       'ROUTE_CHANGED' (state, transition) {
-        store.state[moduleName] = cloneRoute(transition.to, transition.from)
+        let route = cloneRoute(transition.to, transition.from)
+        let index = _.findIndex(store.state[moduleName], route)
+        if (index >= 0) {
+          store.state[moduleName].splice(index, 1)
+        }
+        store.state[moduleName].push(route)
       }
     }
   })
 
-  // let isTimeTraveling = false
-
-  // sync store on router navigation
-  // const afterEachUnHook = router.afterEach((to, from) => {
-  //   if (isTimeTraveling) {
-  //     isTimeTraveling = false
-  //     return
-  //   }
-  //   store.commit(moduleName + '/ROUTE_CHANGED', { to, from })
-  // })
+  router.afterEach((to, from) => {
+    store.commit(moduleName + '/ROUTE_CHANGED', { to, from })
+  })
 }
 
-function cloneRoute (to, from) {
+function cloneRoute (to) {
   const clone = {
     name: to.name,
     path: to.path,
@@ -32,9 +31,6 @@ function cloneRoute (to, from) {
     params: to.params,
     fullPath: to.fullPath,
     meta: to.meta
-  }
-  if (from) {
-    clone.from = cloneRoute(from)
   }
   return Object.freeze(clone)
 }

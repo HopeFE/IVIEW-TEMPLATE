@@ -11,6 +11,16 @@
         </BreadcrumbItem>
       </Breadcrumb>
     </div>
+    <div class="header-bar-avator-dropdown">
+      <Dropdown @on-click="handleClick">
+        <span style="color: #2d8cf0">{{name}}  </span>
+        <Icon style="color: #2d8cf0" type="arrow-down-b" size="12"/>
+        <DropdownMenu slot="list">
+          <DropdownItem name="center">个人中心</DropdownItem>
+          <DropdownItem name="logout">退出登录</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </div>
   </div>
 </template>
 
@@ -22,6 +32,10 @@ export default {
       type: Boolean,
       default: true
     },
+    name: {
+      type: String,
+      default: ''
+    },
     breadcrumbList: {
       type: Array,
       default () {
@@ -32,6 +46,17 @@ export default {
   methods: {
     handleChange () {
       this.$emit('on-change', !this.collapsed)
+    },
+    handleClick (name) {
+      switch (name) {
+        case 'logout':
+          // this.handleLogOut().then(() => {
+          this.$router.push({
+            name: 'login'
+          })
+          // })
+          break
+      }
     }
   }
 }
@@ -65,4 +90,14 @@ export default {
   &-content-con
     float right
     height auto
+  &-avator-dropdown
+    float right
+    display inline-block
+    height 32px
+    margin-top 26px
+    vertical-align middle
+    line-height 10px
+    padding 0 15px 0
+    &:hover
+      cursor pointer
 </style>

@@ -1,6 +1,5 @@
-/* eslint-disable no-new */
 <template>
-  <i-menu :open-names="['1']" width="200" class="sideBar" theme="dark" active-name="1-2" >
+  <i-menu :open-names="['1']" width="200" class="sideBar" theme="dark" active-name="1-2">
     <Submenu name="1">
       <template slot="title">
         <Icon type="ios-analytics" size="18"/>

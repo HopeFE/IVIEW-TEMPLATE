@@ -5,9 +5,7 @@
     </Sider>
     <Layout>
       <Header class="header-con">
-        <header-bar :collapsed="collapsed" @on-coll-change="handleCollapsedChange">
-          <user :name="name"/>
-        </header-bar>
+        <header-bar :collapsed="collapsed" :name="name" @on-coll-change="handleCollapsedChange"/>
       </Header>
       <Content>
         <Layout>
@@ -26,11 +24,10 @@
 <script>
 import headerBar from './components/header'
 import sideBar from './components/side-bar'
-import user from './components/user'
 
 export default {
   components: {
-    headerBar, sideBar, user
+    headerBar, sideBar
   },
   data () {
     return {

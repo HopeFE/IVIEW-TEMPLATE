@@ -2,7 +2,7 @@ import * as types from './mutationTypes'
 import axios from '@/libs/axios'
 
 /** 获取文章信息 */
-export const getNews = ({ rootState, commit, state, dispatch }) => {
+export const getUserInfo = ({ rootState, commit, state, dispatch }) => {
   return new Promise((resolve, reject) => {
     axios({
       method: 'get',

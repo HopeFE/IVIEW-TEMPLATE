@@ -1,2 +1,2 @@
-/** 新闻列表 */
-export const ROUTER_INTO = 'ROUTER_INTO'
+/** 面包屑 */
+export const BREADCRUMD = 'BREADCRUMD'

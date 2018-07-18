@@ -22,7 +22,8 @@ module.exports = {
       'vue': 'Vue',
       'vue-router': 'VueRouter',
       'vuex': 'Vuex',
-      'iview': 'iview'
+      'iview': 'iview',
+      'lodash': '_'
     }
   }
 }

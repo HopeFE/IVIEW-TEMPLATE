@@ -1,12 +1,19 @@
+
 export default [
   {
-    path: '/',
+    path: 'about',
     name: 'about',
-    component: import(/* webpackChunkName: "example" */'./pages/About.vue')
+    meta: {
+      title: '关于'
+    },
+    component: () => import(/* webpackChunkName: "example" */'./pages/about')
   },
   {
-    path: '/home',
+    path: 'home',
     name: 'home',
-    component: import(/* webpackChunkName: "example" */'./pages/Home.vue')
+    meta: {
+      title: '首页'
+    },
+    component: () => import(/* webpackChunkName: "example" */'./pages/home')
   }
 ]

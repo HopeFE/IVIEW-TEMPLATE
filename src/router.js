@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import { sync } from 'vuex-router-sync'
 import iView from 'iview'
 import store from '@/store'
+import history from '@/plugins/history.js'
 import layout from '@/view/layout/index'
 import example from '@/view/example/router'
 import errorPage from '@/view/error-page/router'
@@ -15,10 +16,10 @@ let router = new Router({
       path: '/',
       name: 'index',
       component: layout,
-      meta: {
-        title: '登录'
-      },
-      children: []
+      redirect: { name: 'home' },
+      children: [
+        ...example
+      ]
     },
     {
       path: '/login',
@@ -26,9 +27,8 @@ let router = new Router({
       meta: {
         title: '登录'
       },
-      component: () => import(/* webpackChunkName: "example" */'@/view/login/login')
+      component: () => import(/* webpackChunkName: "login" */'@/view/login/login')
     },
-    ...example,
     // 必须在最底下
     ...errorPage
   ]
@@ -45,5 +45,7 @@ router.afterEach(route => {
 
 // 同步store和路由
 sync(store, router)
+// 鲈路由历史同步
+history(store, router)
 
 export default router
