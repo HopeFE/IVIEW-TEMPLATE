@@ -2,7 +2,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Vue Style Guide](https://img.shields.io/badge/vue_style-beta-brightgreen.svg)](https://vuefe.cn/v2/style-guide/)
 [![vue](https://img.shields.io/badge/vue-2.5.16-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
-[![iview ui](https://img.shields.io/badge/iview-2.14.0-brightgreen.svg?style=flat-square)](https://github.com/iview/iview)
+[![iview ui](https://img.shields.io/badge/iview-3.0.0-brightgreen.svg?style=flat-square)](https://github.com/iview/iview)
 [![vue-cli3.0](https://img.shields.io/badge/vue_cli-3.0-brightgreen.svg?style=flat-square)](https://cli.vuejs.org)
 
 ## 使用前必读

@@ -1,8 +1,12 @@
 module.exports = {
   baseUrl: './',
   assetsDir: 'static',
+  chainWebpack: config => {
+    config.plugins.delete('prefetch')
+  },
   productionSourceMap: false,
   lintOnSave: true,
+  parallel: true,
   devServer: {
     open: true,
     host: '0.0.0.0',
@@ -11,7 +15,7 @@ module.exports = {
     inline: true,
     proxy: {
       '/': {
-        target: 'https://hn.algolia.com/api/v1/',
+        target: 'http://192.168.1.42:8888/bluewhale-line/',
         ws: false,
         changOrigin: true
       }
